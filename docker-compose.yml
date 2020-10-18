@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+  db:
+    restart: always
+    image: mysql:8.0
+    container_name: alcatraz_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 4306:3306
+  api:
+    build:
+      context: ./api/
+    container_name: alcatraz_api
+    command: /bin/sh -c "rm -f /alcatraz/tmp/pids/server.pid && bundle exec rails s -p 8000 -b '0.0.0.0'"
+    volumes:
+      - ./api:/alcatraz
+    environment:
+      RAILS_ENV: development
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+  ui:
+    build:
+      context: ./ui/
+    container_name: alcatraz_ui
+    volumes:
+      - ./ui:/alcatraz
+    command: sh -c "yarn build && yarn start"
+    ports:
+      - 3000:3000
