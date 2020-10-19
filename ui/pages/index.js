@@ -1,7 +1,17 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { getTestData } from '../lib/tests'
 
-export default function Home() {
+export async function getStaticProps(){
+  const message = await getTestData()
+  return {
+    props: {
+      message
+    }
+  }
+}
+
+export default function Home({ message }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -14,6 +24,7 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
+        <h1>{ message }</h1>
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
