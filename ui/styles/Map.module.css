@@ -1,0 +1,4 @@
+.container {
+  background: url(/map.jpg) left top / auto 100% no-repeat;
+  height: 70vh;
+}
