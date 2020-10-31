@@ -4,7 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { getTestData } from '../lib/tests'
 
-export async function getStaticProps(){
+export async function getStaticProps() {
   const message = await getTestData()
   return {
     props: {
@@ -14,7 +14,7 @@ export async function getStaticProps(){
 }
 
 function Path() {
-  return(
+  return (
     <div className={styles.path}>
       <Image
         src="/mitarashi.png"
