@@ -12,9 +12,22 @@ export async function getStaticProps(){
   }
 }
 
-export default function Home({ message }) {
+function Path() {
+  return(
+    <div className={styles.path}>
+      <Image
+        src="/mitarashi.png"
+        width={100}
+        height={100}
+        className={styles.icon}
+      />
+    </div>
+  )
+}
+
+export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Alcatraz</title>
         <link rel="icon" href="/favicon.ico" />
@@ -25,25 +38,9 @@ export default function Home({ message }) {
           Alcatraz
         </h1>
 
-        <Image
-          src="/path.jpg"
-          width={500}
-          height={500}
-        />
-        <h1>{ message }</h1>
-
+        <Path />
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
     </div>
   )
 }
