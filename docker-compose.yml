@@ -28,6 +28,10 @@ services:
     container_name: alcatraz_ui
     volumes:
       - ./ui:/alcatraz
+      - node_modules:/alcatraz/node_modules
     command: sh -c "yarn dev"
     ports:
       - 3000:3000
+
+volumes:
+  node_modules:
