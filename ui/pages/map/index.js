@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../../styles/Map.module.css'
 import Head from 'next/head'
+import Notification from './notification'
 
 export default function Map() {
   return (
@@ -13,6 +14,7 @@ export default function Map() {
 
       <main className={styles.main}>
         <div className={styles.links}>
+          <Notification />
           <Link href="/">
             <a>トップに戻る</a>
           </Link>
