@@ -1,14 +1,9 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background: url(/map.jpg) left top / auto 100% no-repeat;
-  height: 70vh;
+  height: 100vh;
 }
 
 .links {
-  display: flex;
-  justify-content: center;
   height: 20%;
 }
 

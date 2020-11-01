@@ -4,6 +4,8 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -26,9 +28,18 @@ export default function Notification() {
           <Typography className={classes.heading}>1人とすれ違いました！</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            ひかりさんがハンバーガー屋さんをおすすめしてます
-          </Typography>
+          <List>
+            <ListItem>
+              <Typography>
+                ひかりさんがハンバーガー屋さんをおすすめしてます
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography>
+                満島さんがハンバーガー屋さんをおすすめしてます
+              </Typography>
+            </ListItem>
+          </List>
         </AccordionDetails>
       </Accordion>
     </div>
