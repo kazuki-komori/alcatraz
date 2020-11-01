@@ -2,12 +2,28 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../../styles/Map.module.css'
 import Head from 'next/head'
-import Notification from '../shared/notification'
 import Grid from '@material-ui/core/Grid';
 import DirectionsWalkIcon from '@material-ui/icons/DirectionsWalk';
 import Header from '../shared/header';
+import { green } from '@material-ui/core/colors'
+import LinkIcons from '../shared/linkIcons';
+
+function WalkIconLink(){
+  return (
+    <Link href="/">
+      <a>
+        <DirectionsWalkIcon
+          style={{ color: green[500], fontSize: 50 }}
+          className={styles.linkIcon}
+        />
+      </a>
+    </Link>
+  )
+}
 
 export default function Map() {
+  const walkIconLink = WalkIconLink();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,18 +32,7 @@ export default function Map() {
       </Head>
       <Header />
       <main className={styles.main}>
-        <Grid container>
-          <Grid item xs={8}>
-            <Notification />
-          </Grid>
-          <Grid item xs={1}></Grid>
-          <Grid item xs={2}>
-            <Link href="/">
-              <a><DirectionsWalkIcon fontSize="large" /></a>
-            </Link>
-          </Grid>
-          <Grid item xs={1}></Grid>
-        </Grid>
+        <LinkIcons uniqueIconLink={walkIconLink} />
         <Grid container justify="center" alignItems="center" className={styles.iconBox}>
           <Image
             src="/mitarashi.png"
