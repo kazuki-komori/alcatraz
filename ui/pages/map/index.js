@@ -5,17 +5,18 @@ import Head from 'next/head'
 import Notification from '../shared/notification'
 import Grid from '@material-ui/core/Grid';
 import DirectionsWalkIcon from '@material-ui/icons/DirectionsWalk';
+import Header from '../shared/header';
 
 export default function Map() {
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
         <title>Alcatraz</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Header />
       <main className={styles.main}>
-        <Grid container className={styles.links}>
+        <Grid container>
           <Grid item xs={8}>
             <Notification />
           </Grid>
@@ -27,13 +28,13 @@ export default function Map() {
           </Grid>
           <Grid item xs={1}></Grid>
         </Grid>
-        <div className={styles.icons}>
+        <Grid container justify="center" alignItems="center" className={styles.iconBox}>
           <Image
             src="/mitarashi.png"
             width={50}
             height={50}
           />
-        </div>
+        </Grid>
       </main>
     </div>
   )

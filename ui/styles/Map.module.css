@@ -1,15 +1,16 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .main {
   background: url(/map.jpg) left top / auto 100% no-repeat;
-  height: 100vh;
-}
-
-.links {
-  height: 20%;
-}
-
-.icons {
+  flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80%;
+  flex-direction: column;
+}
+
+.iconBox {
+  flex: 1;
 }
