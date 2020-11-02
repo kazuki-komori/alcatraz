@@ -13,8 +13,9 @@
 }
 
 .iconBox {
-  position: relative;
-  top: 65%;
+  /* <main> を基準にしている */
+  position: absolute;
+  bottom: 20%;
 }
 
 @-webkit-keyframes poyooon {
