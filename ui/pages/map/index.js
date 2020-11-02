@@ -1,7 +1,10 @@
-import Image from 'next/image'
-import styles from '../../styles/Map.module.css'
-import Head from 'next/head'
+import Image from 'next/image';
+import Head from 'next/head';
+
 import Grid from '@material-ui/core/Grid';
+
+import styles from '../../styles/Map.module.scss';
+
 import Header from '../shared/header';
 import { LinkIcons, WalkIconLink } from '../shared/linkIcons';
 

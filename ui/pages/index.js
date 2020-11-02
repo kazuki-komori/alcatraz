@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import { getTestData } from '../lib/tests'
 
 import Header from './shared/header';
@@ -17,7 +17,6 @@ export async function getStaticProps() {
 }
 
 export default function Home() {
-
   return (
     <div className={styles.container}>
       <Head>

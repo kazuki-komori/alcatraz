@@ -2,20 +2,22 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.main {
-  background: url(/path.png) left top / 100% 100% no-repeat;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.iconBox {
-  /* <main> を基準にしている */
-  position: absolute;
-  bottom: 20%;
+  .main {
+    background: url(/path.png) left top / 100% 100% no-repeat;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .iconBox {
+      /* <main> を基準にしている */
+      position: absolute;
+      bottom: 20%;
+      .icon {
+        animation: poyooon 1.8s linear 0s 1;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
 }
 
 @-webkit-keyframes poyooon {
@@ -70,9 +72,4 @@
   100% {
     transform: scale(1, 1) translate(0%, 0%);
   }
-}
-
-.icon {
-  animation: poyooon 1.8s linear 0s 1;
-  animation-iteration-count: infinite;
 }

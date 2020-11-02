@@ -1,7 +1,10 @@
-import styles from '../../styles/Map.module.css'
-import Head from 'next/head'
+import Head from 'next/head';
+
+import styles from '../../styles/Map.module.scss';
+
 import Header from '../shared/header';
 import { LinkIcons, WalkIconLink } from '../shared/linkIcons';
+import SimpleTabs from './simpleTabs';
 
 export default function Notifications() {
 
@@ -13,6 +16,7 @@ export default function Notifications() {
       </Head>
       <Header />
       <main>
+        <SimpleTabs />
         <LinkIcons uniqueIconLink={WalkIconLink()} />
       </main>
     </div>
