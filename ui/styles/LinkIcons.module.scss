@@ -1,0 +1,14 @@
+.linkIconBox {
+  padding-top: 20px;
+  width: 100%;
+  .linkIconWrapper {
+    margin-top: 20px;
+    padding-right: 30px;
+    text-align: right;
+    .linkIcon {
+      background-color: white;
+      border-radius: 100%;
+      box-shadow: 2px 3px 2px 0px #000;
+    }
+  }
+}
