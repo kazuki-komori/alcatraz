@@ -15,7 +15,7 @@ services:
     container_name: alcatraz_api
     command: /bin/sh -c "rm -f /alcatraz/tmp/pids/server.pid && bundle exec rails s -p 8000 -b '0.0.0.0'"
     volumes:
-      - ./api:/alcatraz
+      - ./api:/alcatraz/api
     environment:
       RAILS_ENV: development
     ports:
@@ -27,7 +27,7 @@ services:
       context: ./ui/
     container_name: alcatraz_ui
     volumes:
-      - ./ui:/alcatraz
+      - ./ui:/alcatraz/ui
     command: sh -c "yarn dev"
     ports:
       - 3000:3000
