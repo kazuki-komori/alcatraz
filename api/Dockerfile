@@ -22,8 +22,9 @@ RUN dpkg -i mysql-common_8.0.18-1debian10_amd64.deb \
     libmysqlclient-dev_8.0.18-1debian10_amd64.deb
 
 WORKDIR $APP_ROOT
-COPY . $APP_ROOT
+COPY Gemfile Gemfile.lock $APP_ROOT/
 RUN bundle install -j 4
+COPY . $APP_ROOT
 
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
