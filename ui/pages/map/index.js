@@ -5,8 +5,8 @@ import Grid from '@material-ui/core/Grid';
 
 import styles from '../../styles/Map.module.scss';
 
-import Header from '../shared/header';
-import { LinkIcons, WalkIconLink } from '../shared/linkIcons';
+import Header from '../../components/header';
+import { LinkIcons, WalkIconLink } from '../../components/linkIcons';
 
 export default function Map() {
 

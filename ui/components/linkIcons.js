@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import styles from '../../styles/LinkIcons.module.scss'
+import styles from '../styles/LinkIcons.module.scss'
 
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import HomeIcon from '@material-ui/icons/Home';

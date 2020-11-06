@@ -3,8 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import { getTestData } from '../lib/tests'
 
-import Header from './shared/header';
-import { LinkIcons, MapIconLink } from './shared/linkIcons';
+import Header from '../components/header';
+import { LinkIcons, MapIconLink } from '../components/linkIcons';
 
 // 疎通確認のコード
 export async function getStaticProps() {
