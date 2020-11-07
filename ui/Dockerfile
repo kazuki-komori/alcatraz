@@ -1,9 +1,9 @@
 FROM node:14.14.0
 
-RUN mkdir /alcatraz
+RUN mkdir -p /alcatraz/ui
 
-WORKDIR /alcatraz
-COPY . /alcatraz
+WORKDIR /alcatraz/ui
+COPY . /alcatraz/ui
 
 RUN yarn install
 
